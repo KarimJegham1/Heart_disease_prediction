@@ -1,1 +1,5 @@
-
+Python 3.x
+pandas: For data manipulation.
+scikit-learn: For machine learning models, preprocessing, and evaluation.
+matplotlib: For plotting and visualization.
+Feast: For managing features and feature stores.
