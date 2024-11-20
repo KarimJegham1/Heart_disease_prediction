@@ -19,13 +19,6 @@ The features are stored in Parquet format, and the feature store is updated with
 
 **logging.py**: This script logs the predictions made by the trained model on the test set. For each instance in the test set, it logs the predicted class along with the real class, providing insights into
 the model's performance.Pedictions made by the trained model on the test set are logged with real and predicted class labels. This is useful for evaluating the model’s performance and for debugging.
-
-**Requirements:**
-Python 3.x
-pandas: For data manipulation.
-scikit-learn: For machine learning models, preprocessing, and evaluation.
-matplotlib: For plotting and visualization.
-Feast: For managing features and feature stores.
 **Conclusion**
 This project demonstrates a full machine learning pipeline for predicting heart disease. It involves data preprocessing, feature selection, model training, and logging of predictions.
 The model is trained using a RandomForest classifier, with feature selection performed to identify the most important features. 
