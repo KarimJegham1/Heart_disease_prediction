@@ -1,6 +1,4 @@
 import pandas as pd 
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import Normalizer
 from sklearn.preprocessing import LabelEncoder, MinMaxScaler
 
 def Preprocessing(path):
@@ -14,7 +12,7 @@ def Preprocessing(path):
     for i in df.columns():
         mean_col=df[i].mean()
         df[i].fillna(mean_col,inplace=True)
-        
+
     # Step 1: Automatically detect binary and multiclass columns
     binary_columns = []
     multiclass_columns = []
@@ -51,10 +49,4 @@ def Preprocessing(path):
     print("Multiclass columns:", multiclass_columns)
     print("Processed dataset:")
     print(df.head())
-    X_train, X_test=train_test_split(df,test_size=0.2,random_state=42)
-    norm=Normalizer()
-    X_train_norm=norm.fit_transform(X_train)
-    X_test_norm=norm.transform(X_test)
-    heart_disease_df_X = df.drop(columns=['target'])
-    heart_disease_df_y = df['target']
-    X_train, X_test, y_train, y_test=train_test_split(heart_disease_df_X,heart_disease_df_y,test_size=0.2,random_state=42)
+    return df
